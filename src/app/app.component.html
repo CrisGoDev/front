@@ -1,0 +1,60 @@
+<mat-sidenav-container>
+      <mat-sidenav #sidenav mode="push" [(opened)]="opened" class="side">
+        <mat-icon  class="material-icons " [routerLink]="['/home']">home</mat-icon><br>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/proveedore']">
+          groups</mat-icon><br>
+      </div>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/producto']">
+            inventory </mat-icon><br>
+      </div>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/Insumos']">
+          create</mat-icon><br>
+      </div>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/LineaProduccion']">checklist</mat-icon><br>
+      </div>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/Compra']">
+          control_point_duplicate</mat-icon><br>
+      </div>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/Venta']">
+          library_add_check</mat-icon><br>
+      </div>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/Estadisticas']">
+          align_vertical_bottom</mat-icon><br>
+      </div>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/Empleado']">
+          person_add_alt</mat-icon><br>
+      </div>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/Distribuidora']">
+          local_shipping</mat-icon><br>
+      </div>
+      <div>
+        <mat-icon  class="material-icons " [routerLink]="['/Pago']">
+          paypal</mat-icon><br>
+      </div>
+      
+      <div>
+        <!-- <button mat-icon-button class="material-icons " (click)="logout()" *ngIf="  usuario?.email!==(undefined) ">logout</button> -->
+      </div>
+      </mat-sidenav>
+      
+     
+    <!-- </mat-drawer> -->
+    <mat-sidenav-content>
+      <div>
+        <button  mat-raised-button (click)= "opened=!opened" >Mostrar/Ocultar</button>
+        
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  
+    
+  </mat-sidenav-container>
